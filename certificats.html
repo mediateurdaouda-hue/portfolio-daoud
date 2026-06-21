@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Certificats — Hama DIALLO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #0D1B2A;
+            color: #fff;
+            padding: 3rem 1.5rem;
+            min-height: 100vh;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+            margin-bottom: 2.5rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: #F97316; }
+        .cert-list {
+            display: grid;
+            gap: 1rem;
+        }
+        .cert-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1.1rem 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .cert-row:hover {
+            background: rgba(255,255,255,0.07);
+            border-color: rgba(249,115,22,0.3);
+        }
+        .cert-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            min-width: 0;
+            flex: 1;
+        }
+        .cert-icon {
+            width: 46px; height: 46px;
+            background: rgba(249,115,22,0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F97316;
+            font-size: 1.15rem;
+            flex-shrink: 0;
+        }
+        .cert-text { min-width: 0; }
+        .cert-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+        .cert-meta {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.8rem;
+        }
+        .cert-actions {
+            display: flex;
+            gap: 0.6rem;
+            flex-shrink: 0;
+        }
+        .cert-actions a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.55rem 1rem;
+            border-radius: 8px;
+            font-size: 0.825rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+        .btn-view { background: rgba(255,255,255,0.1); color: #fff; }
+        .btn-view:hover { background: rgba(255,255,255,0.18); }
+        .btn-download { background: #F97316; color: #fff; }
+        .btn-download:hover { background: #EA580C; }
+
+        @media (max-width: 600px) {
+            body { padding: 2rem 1rem; }
+            .cert-row { flex-direction: column; align-items: flex-start; }
+            .cert-actions { width: 100%; }
+            .cert-actions a { flex: 1; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html#certifications" class="back-link"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
+        <h1>Tous mes certificats</h1>
+        <p class="subtitle">Liste complète des formations et certifications obtenues</p>
+
+        <div class="cert-list">
+
+            <div class="cert-row">
+                <div class="cert-info">
+                    <div class="cert-icon"><i class="fab fa-drupal"></i></div>
+                    <div class="cert-text">
+                        <div class="cert-title">Certificat de Formation Drupal</div>
+                        <div class="cert-meta">Université Aube Nouvelle — 2025</div>
+                    </div>
+                </div>
+                <div class="cert-actions">
+                    <a href="certificats/CERTIFICAT DE FORMATION DRUPAL.jpeg" target="_blank" class="btn-view"><i class="fas fa-eye"></i> Voir</a>
+                    <a href="certificats/CERTIFICAT DE FORMATION DRUPAL.jpeg" download class="btn-download"><i class="fas fa-download"></i> Télécharger</a>
+                </div>
+            </div>
+
+            <div class="cert-row">
+                <div class="cert-info">
+                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="cert-text">
+                        <div class="cert-title">Attestation de Formation Cybersécurité</div>
+                        <div class="cert-meta">Université Joseph Ki-Zerbo — 2025</div>
+                    </div>
+                </div>
+                <div class="cert-actions">
+                    <a href="certificats/ATTESTATION DE FORMATION CYBER SECURITE.jpeg" target="_blank" class="btn-view"><i class="fas fa-eye"></i> Voir</a>
+                    <a href="certificats/ATTESTATION DE FORMATION CYBER SECURITE.jpeg" download class="btn-download"><i class="fas fa-download"></i> Télécharger</a>
+                </div>
+            </div>
+
+            <div class="cert-row">
+                <div class="cert-info">
+                    <div class="cert-icon"><i class="fab fa-python"></i></div>
+                    <div class="cert-text">
+                        <div class="cert-title">Développement Python — Niveau Intermédiaire à Avancé</div>
+                        <div class="cert-meta">2025</div>
+                    </div>
+                </div>
+                <div class="cert-actions">
+                    <a href="certificats/CERTIFICAT DEVELOPPEMENT PYTHON NIVEAU INTERMEDIAIRE A AVANCE.pdf" target="_blank" class="btn-view"><i class="fas fa-eye"></i> Voir</a>
+                    <a href="certificats/CERTIFICAT DEVELOPPEMENT PYTHON NIVEAU INTERMEDIAIRE A AVANCE.pdf" download class="btn-download"><i class="fas fa-download"></i> Télécharger</a>
+                </div>
+            </div>
+
+            <div class="cert-row">
+                <div class="cert-info">
+                    <div class="cert-icon"><i class="fab fa-python"></i></div>
+                    <div class="cert-text">
+                        <div class="cert-title">Programmation Python — Niveau Débutant</div>
+                        <div class="cert-meta">2025</div>
+                    </div>
+                </div>
+                <div class="cert-actions">
+                    <a href="certificats/CERTIFICAT PROGRAMMATION NIVEAU DEBUTANT PYTHON.pdf" target="_blank" class="btn-view"><i class="fas fa-eye"></i> Voir</a>
+                    <a href="certificats/CERTIFICAT PROGRAMMATION NIVEAU DEBUTANT PYTHON.pdf" download class="btn-download"><i class="fas fa-download"></i> Télécharger</a>
+                </div>
+            </div>
+
+            <div class="cert-row">
+                <div class="cert-info">
+                    <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                    <div class="cert-text">
+                        <div class="cert-title">Savoir Communiquer avec les IA</div>
+                        <div class="cert-meta">2025</div>
+                    </div>
+                </div>
+                <div class="cert-actions">
+                    <a href="certificats/CERTIFICAT SAVOIR COMMUNIQUER AVEC LES IA.pdf" target="_blank" class="btn-view"><i class="fas fa-eye"></i> Voir</a>
+                    <a href="certificats/CERTIFICAT SAVOIR COMMUNIQUER AVEC LES IA.pdf" download class="btn-download"><i class="fas fa-download"></i> Télécharger</a>
+                </div>
+            </div>
+
+            <div class="cert-row">
+                <div class="cert-info">
+                    <div class="cert-icon"><i class="fas fa-video"></i></div>
+                    <div class="cert-text">
+                        <div class="cert-title">Création de Vidéos & Images avec l'IA</div>
+                        <div class="cert-meta">2025</div>
+                    </div>
+                </div>
+                <div class="cert-actions">
+                    <a href="certificats/CERTIFICAT CREATION DES VIDEOS & IMAGES AVEC IA.pdf" target="_blank" class="btn-view"><i class="fas fa-eye"></i> Voir</a>
+                    <a href="certificats/CERTIFICAT CREATION DES VIDEOS & IMAGES AVEC IA.pdf" download class="btn-download"><i class="fas fa-download"></i> Télécharger</a>
+                </div>
+            </div>
+
+            <div class="cert-row">
+                <div class="cert-info">
+                    <div class="cert-icon"><i class="fas fa-chart-bar"></i></div>
+                    <div class="cert-text">
+                        <div class="cert-title">Data Analyse</div>
+                        <div class="cert-meta">2025</div>
+                    </div>
+                </div>
+                <div class="cert-actions">
+                    <a href="certificats/CERTIFICAT DATA ANALYSE.pdf" target="_blank" class="btn-view"><i class="fas fa-eye"></i> Voir</a>
+                    <a href="certificats/CERTIFICAT DATA ANALYSE.pdf" download class="btn-download"><i class="fas fa-download"></i> Télécharger</a>
+                </div>
+            </div>
+
+            <div class="cert-row">
+                <div class="cert-info">
+                    <div class="cert-icon"><i class="fas fa-flask"></i></div>
+                    <div class="cert-text">
+                        <div class="cert-title">Data Sciences & IA</div>
+                        <div class="cert-meta">2025</div>
+                    </div>
+                </div>
+                <div class="cert-actions">
+                    <a href="certificats/CERTIFICAT DATA SCIENCES & IA.pdf" target="_blank" class="btn-view"><i class="fas fa-eye"></i> Voir</a>
+                    <a href="certificats/CERTIFICAT DATA SCIENCES & IA.pdf" download class="btn-download"><i class="fas fa-download"></i> Télécharger</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
