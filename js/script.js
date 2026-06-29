@@ -49,6 +49,7 @@ function showSection(element) {
     const target = element.getAttribute("href").split("#")[1];
     document.querySelector("#" + target).classList.add("active");
 }
+
 function updateNav(element) {
     for (let i = 0; i < totalNavList; i++) {
         navList[i].querySelector("a").classList.remove("active");
@@ -77,13 +78,11 @@ document.querySelectorAll(".hire-me[data-section-index]").forEach(function (btn)
 const navTogglerBtn = document.querySelector(".nav-toggler"),
       Hama = document.querySelector(".Hama");
 
-// Pulse sur le hamburger au chargement (mobile seulement)
 if (window.innerWidth < 1199) {
     navTogglerBtn.classList.add("nav-pulse");
 }
 
 navTogglerBtn.addEventListener("click", () => {
-    // Arrêter le pulse dès le premier clic
     navTogglerBtn.classList.remove("nav-pulse");
     asideSectionTogglerBtn();
 });
@@ -100,7 +99,6 @@ function asideSectionTogglerBtn() {
 let currentLang = "fr";
 const langToggle = document.getElementById("langToggle");
 const langLabel  = document.getElementById("langLabel");
-// Appliquer le français par défaut au chargement
 langLabel.textContent = "🇬🇧";
 document.documentElement.lang = "fr";
 applyLanguage("fr");
@@ -112,7 +110,6 @@ langToggle.addEventListener("click", function () {
 });
 
 function applyLanguage(lang) {
-    // Paragraphe about dynamique
     var enP = document.getElementById("about-text-en");
     var frP = document.getElementById("about-text-fr");
     if (enP && frP) {
@@ -138,7 +135,8 @@ function applyLanguage(lang) {
         loop: true
     });
 }
-/* =======================================================Droit d'auteur ===================================*/
+
+/* ========================= Droit d'auteur ========================= */
 (function () {
     var creationYear = 2025;
     var currentYear = new Date().getFullYear();
@@ -161,7 +159,6 @@ function resetSkills() {
     });
 }
 
-// Observer les clics nav pour déclencher l'animation
 navList.forEach(function (li) {
     li.querySelector("a").addEventListener("click", function () {
         var target = this.getAttribute("href").split("#")[1];
@@ -174,7 +171,7 @@ navList.forEach(function (li) {
 
 /* ========================= Années d'expérience dynamiques ========================= */
 (function () {
-    var startYear = 2022; // Début de l'expérience (formateur Photoshop depuis 2022)
+    var startYear = 2022;
     var years = new Date().getFullYear() - startYear;
     document.getElementById("exp-years-en").textContent = years;
     document.getElementById("exp-years-fr").textContent = years;
@@ -182,7 +179,7 @@ navList.forEach(function (li) {
 
 /* ========================= Âge dynamique ========================= */
 (function () {
-    var birth = new Date(2000, 0, 1); // À adapter avec ta vraie date de naissance (année, mois 0-indexé, jour)
+    var birth = new Date(2000, 0, 1);
     var today = new Date();
     var age = today.getFullYear() - birth.getFullYear();
     if (today.getMonth() < birth.getMonth() ||
@@ -290,44 +287,6 @@ navList.forEach(function (li) {
     });
 })();
 
-/* ========================= Bottom Navigation (mobile) ========================= */
-(function () {
-    var bottomItems = document.querySelectorAll(".bottom-nav-item");
-
-    bottomItems.forEach(function (item) {
-        item.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            // Retirer active de tous les items bottom nav
-            bottomItems.forEach(function (i) { i.classList.remove("active"); });
-            this.classList.add("active");
-
-            // Afficher la section ciblée (réutilise les fonctions existantes)
-            removeBackSection();
-            for (var j = 0; j < totalNavList; j++) {
-                if (navList[j].querySelector("a").classList.contains("active")) {
-                    addBackSection(j);
-                }
-                navList[j].querySelector("a").classList.remove("active");
-            }
-            showSection(this);
-            updateNav(this);
-        });
-    });
-
-    // Synchroniser le bottom nav quand on clique sur la sidebar
-    navList.forEach(function (li) {
-        li.querySelector("a").addEventListener("click", function () {
-            var target = this.getAttribute("href");
-            bottomItems.forEach(function (item) {
-                item.classList.remove("active");
-                if (item.getAttribute("href") === target) {
-                    item.classList.add("active");
-                }
-            });
-        });
-    });
-})();
 
 /* ========================= Modal Aperçu CV ========================= */
 (function () {
@@ -361,7 +320,6 @@ navList.forEach(function (li) {
 /* ========================= Scroll to Top ========================= */
 (function () {
     var btn = document.getElementById("scroll-top");
-    var activeSection = document.querySelector(".section.active");
 
     document.querySelectorAll(".section").forEach(function (section) {
         section.addEventListener("scroll", function () {
