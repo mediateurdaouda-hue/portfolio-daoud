@@ -171,7 +171,7 @@ navList.forEach(function (li) {
 
 /* ========================= Années d'expérience dynamiques ========================= */
 (function () {
-    var startYear = 2022;
+    var startYear = 2024;
     var years = new Date().getFullYear() - startYear;
     document.getElementById("exp-years-en").textContent = years;
     document.getElementById("exp-years-fr").textContent = years;
